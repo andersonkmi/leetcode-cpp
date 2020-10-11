@@ -20,7 +20,8 @@ bool ValidParentheses::is_valid(const std::string& input) {
         return false;
     }
 
-    if (has_valid_chars(input) == false) {
+    std::vector<char> chars(input.c_str(), input.c_str() + input.size());
+    if (has_valid_chars(chars) == false) {
         return false;
     }
 
@@ -31,9 +32,7 @@ bool ValidParentheses::is_even_length(const std::string& input) {
     return input.size() % 2 == 0;
 }
 
-bool ValidParentheses::has_valid_chars(const std::string& input) {
-    std::vector<char> chars(input.c_str(), input.c_str() + input.size());
-    
+bool ValidParentheses::has_valid_chars(const std::vector<char>& chars) {
     for (std::vector<char>::const_iterator index = chars.begin(); index != chars.end(); index++) {
         std::vector<char>::const_iterator open_iterator = std::find(opening_symbols_.begin(), opening_symbols_.end(), *index);
         std::vector<char>::const_iterator close_iterator = std::find(closing_symbols_.begin(), closing_symbols_.end(), *index);

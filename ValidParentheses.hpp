@@ -15,7 +15,7 @@ public:
     
 private:
     bool is_even_length(const std::string&);
-    bool has_valid_chars(const std::string&);
+    bool has_valid_chars(const std::vector<char>&);
 
     std::vector<char> opening_symbols_;
     std::vector<char> closing_symbols_;
