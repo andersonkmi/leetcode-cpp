@@ -6,6 +6,8 @@ using namespace std;
 class ValidParentheses {
 public:
     ValidParentheses();
+    ValidParentheses(const ValidParentheses&) = delete;
+    ValidParentheses& operator= (const ValidParentheses&) = delete;
     bool is_valid(const std::string& input);
 };
 

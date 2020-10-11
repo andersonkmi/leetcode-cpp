@@ -139,7 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="leetcode-cpp.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="ValidParentheses.cpp" />
   </ItemGroup>
   <ItemGroup>
