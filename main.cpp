@@ -2,9 +2,13 @@
 //
 
 #include <iostream>
+#include "ValidParentheses.hpp"
 
 int main()
 {
+    ValidParentheses service;
+    service.is_valid("<)");
+
     std::cout << "Testing" << std::endl;
     std::cout << "Hello World!" << std::endl;
 }
