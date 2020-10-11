@@ -141,9 +141,11 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ValidParentheses.cpp" />
+    <ClCompile Include="ValidParenthesesTester.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ValidParentheses.hpp" />
+    <ClInclude Include="ValidParenthesesTester.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,7 +1,8 @@
 #include "ValidParentheses.hpp"
 #include <algorithm>
+#include <stack>
 
-ValidParentheses::ValidParentheses() : opening_symbols_(), closing_symbols_(), expected_symbol_(), tokens_() 
+ValidParentheses::ValidParentheses() : opening_symbols_(), closing_symbols_(), expected_symbol_() 
 {
     opening_symbols_.push_back('(');
     opening_symbols_.push_back('[');
@@ -16,6 +17,18 @@ ValidParentheses::ValidParentheses() : opening_symbols_(), closing_symbols_(), e
     expected_symbol_.insert(std::make_pair('}', '{'));
 }
 
+ValidParentheses::~ValidParentheses()
+{
+    opening_symbols_.clear();
+    closing_symbols_.clear();
+    expected_symbol_.clear();
+}
+
+bool ValidParentheses::is_valid(const std::string& input) const 
+{
+    return const_cast<ValidParentheses*>(this)->is_valid(input);
+}
+
 bool ValidParentheses::is_valid(const std::string& input) 
 {
     if (is_even_length(input) == false) 
@@ -28,28 +41,34 @@ bool ValidParentheses::is_valid(const std::string& input)
         return false;
     }
 
+    std::stack<char> tokens;
     for (std::vector<char>::const_iterator index = chars.cbegin(); index != chars.cend(); index++) 
     {
         if (is_opening_symbol(*index) == true) 
         {
-            tokens_.push(*index);
+            tokens.push(*index);
         } 
         else 
         {
             char expected_opening_char = expected_symbol_[*index];
-            if (tokens_.empty() == true) {
+            if (tokens.empty() == true) {
                 return false;
             }
 
-            char current_top_char = tokens_.top();
-            tokens_.pop();
+            char current_top_char = tokens.top();
+            tokens.pop();
 
             if (current_top_char != expected_opening_char) {
                 return false;
             }
         }
     }
-    return true;
+
+    if (tokens.empty() == true) 
+    {
+        return true;
+    }
+    return false;
 }
 
 bool ValidParentheses::is_even_length(const std::string& input) 

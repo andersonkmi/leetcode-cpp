@@ -2,15 +2,14 @@
 //
 
 #include <iostream>
+#include "ValidParenthesesTester.hpp"
 #include "ValidParentheses.hpp"
 
 int main()
 {
     ValidParentheses service;
-    service.is_valid("<)");
-
-    std::cout << "Testing" << std::endl;
-    std::cout << "Hello World!" << std::endl;
+    ValidParenthesesTester service_tester;
+    service_tester.perform_tests(service);
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

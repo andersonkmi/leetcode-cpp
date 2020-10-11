@@ -1,8 +1,9 @@
-#pragma once
+#ifndef VALID_PARENTHESES_HPP__
+#define VALID_PARENTHESES_HPP__
+
 #include <string>
 #include <vector>
 #include <map>
-#include <stack>
 
 using namespace std;
 
@@ -13,6 +14,9 @@ public:
     ValidParentheses(const ValidParentheses&) = delete;
     ValidParentheses& operator= (const ValidParentheses&) = delete;
     bool is_valid(const std::string& input);
+    bool is_valid(const std::string& input) const;
+
+    virtual ~ValidParentheses();
     
 private:
     bool is_even_length(const std::string&);
@@ -22,7 +26,6 @@ private:
     std::vector<char> opening_symbols_;
     std::vector<char> closing_symbols_;
     std::map<char, char> expected_symbol_;
-
-    std::stack<char> tokens_;
 };
 
+#endif
