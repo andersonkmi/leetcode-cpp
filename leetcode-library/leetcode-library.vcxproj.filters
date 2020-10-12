@@ -21,12 +21,18 @@
     <ClInclude Include="ValidParentheses.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MultiplyStrings.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ValidParentheses.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MultiplyStrings.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
