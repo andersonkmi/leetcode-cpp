@@ -1,13 +1,21 @@
 #ifndef VALID_PARENTHESES_HPP__
 #define VALID_PARENTHESES_HPP__
 
+#ifdef LEETCODELIBRARY_EXPORTS
+#define LEETCODE_LIBRARY_API __declspec(dllexport)
+#else
+#define LEETCODE_LIBRARY_API __declspec(dllimport)
+#endif
+
+
 #include <string>
 #include <vector>
 #include <map>
 
 using namespace std;
 
-class ValidParentheses 
+
+class LEETCODE_LIBRARY_API ValidParentheses
 {
 public:
     ValidParentheses();

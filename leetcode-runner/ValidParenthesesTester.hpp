@@ -1,7 +1,7 @@
 #ifndef VALID_PARENTHESES_TESTER_HPP__
 #define VALID_PARENTHESES_TESTER_HPP__
 
-#include "ValidParentheses.hpp"
+#include <ValidParentheses.hpp>
 
 class ValidParenthesesTester
 {

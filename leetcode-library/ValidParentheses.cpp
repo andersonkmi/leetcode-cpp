@@ -1,6 +1,7 @@
-#include "ValidParentheses.hpp"
 #include <algorithm>
 #include <stack>
+#include "ValidParentheses.hpp"
+
 
 ValidParentheses::ValidParentheses() : opening_symbols_(), closing_symbols_(), expected_symbol_() 
 {
