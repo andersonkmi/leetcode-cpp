@@ -1,9 +1,9 @@
-// leetcode-cpp.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// main.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
 #include "ValidParenthesesTester.hpp"
-#include "ValidParentheses.hpp"
+#include <ValidParentheses.hpp>
 
 int main()
 {
