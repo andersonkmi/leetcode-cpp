@@ -1,6 +1,6 @@
 #include "Fibonacci.hpp"
 
-Fibonacci::Fibonacci()
+Fibonacci::Fibonacci(bool use_memoization) : use_memoization_(use_memoization), calculated_values_()
 {
     // empty constructor
 }
@@ -22,6 +22,17 @@ int Fibonacci::processFibonacci(int number)
     }
     else
     {
-        return processFibonacci(number - 1) + processFibonacci(number - 2);
+        if (use_memoization_ == true)
+        {
+            if (calculated_values_.find(number) == calculated_values_.end())
+            {
+                calculated_values_[number] = processFibonacci(number - 1) + processFibonacci(number - 2);
+            }
+            return calculated_values_[number];
+        }
+        else
+        {
+            return processFibonacci(number - 1) + processFibonacci(number - 2);
+        }
     }
 }

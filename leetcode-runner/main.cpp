@@ -21,4 +21,9 @@ int main()
     std::cout << "fib(3): " << fibonacci->calculate(3) << std::endl;
     std::cout << "fib(5): " << fibonacci->calculate(5) << std::endl;
     std::cout << "fib(41): " << fibonacci->calculate(41) << std::endl;
+    std::cout << "fib(42): " << fibonacci->calculate(42) << std::endl;
+
+    std::shared_ptr<Fibonacci> fiboMemo = std::make_shared<Fibonacci>(true);
+    std::cout << "fib(41): " << fiboMemo->calculate(41) << std::endl;
+    std::cout << "fib(42): " << fiboMemo->calculate(42) << std::endl;
 }
