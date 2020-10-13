@@ -4,12 +4,17 @@
 #include <iostream>
 #include "ValidParenthesesTester.hpp"
 #include <ValidParentheses.hpp>
+#include <MultiplyStrings.hpp>
 
 int main()
 {
-    ValidParentheses service;
-    ValidParenthesesTester service_tester;
-    service_tester.perform_tests(service);
+    //ValidParentheses service;
+    //ValidParenthesesTester service_tester;
+    //service_tester.perform_tests(service);
+
+    MultiplyStrings* ms = new MultiplyStrings();
+    std::cout << ms->multiply("123", "456") << std::endl;
+    delete(ms);
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

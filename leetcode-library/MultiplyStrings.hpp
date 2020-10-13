@@ -21,7 +21,7 @@ public:
     std::string multiply(const std::string& number1, const std::string& number2);
 
 private:
-    unsigned long convert(const std::string&);
+    unsigned long long convert(const std::string&);
 };
 
 #endif
