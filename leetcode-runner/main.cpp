@@ -5,6 +5,7 @@
 #include "ValidParenthesesTester.hpp"
 #include <ValidParentheses.hpp>
 #include <MultiplyStrings.hpp>
+#include <Fibonacci.hpp>
 #include <memory>
 
 int main()
@@ -15,4 +16,9 @@ int main()
 
     std::shared_ptr<MultiplyStrings> msp = std::make_shared<MultiplyStrings>();
     std::cout << msp->multiply("123", "456") << std::endl;
+
+    std::shared_ptr<Fibonacci> fibonacci = std::make_shared<Fibonacci>();
+    std::cout << "fib(3): " << fibonacci->calculate(3) << std::endl;
+    std::cout << "fib(5): " << fibonacci->calculate(5) << std::endl;
+    std::cout << "fib(41): " << fibonacci->calculate(41) << std::endl;
 }

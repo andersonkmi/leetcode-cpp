@@ -151,12 +151,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Fibonacci.hpp" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="MultiplyStrings.hpp" />
     <ClInclude Include="ValidParentheses.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="Fibonacci.cpp" />
     <ClCompile Include="MultiplyStrings.cpp" />
     <ClCompile Include="ValidParentheses.cpp" />
   </ItemGroup>
