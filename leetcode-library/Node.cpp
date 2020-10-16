@@ -27,3 +27,8 @@ bool Node::isVisited() const
 {
     return is_visited_;
 }
+
+bool Node::operator==(const Node& rhs)
+{
+    return this->word_ == rhs.word_;
+}
