@@ -3,6 +3,7 @@
 
 #include <string>
 #include <vector>
+#include <functional>
 
 using namespace std;
 
@@ -23,7 +24,7 @@ public:
 private:
     std::string word_;
     bool is_visited_;
-    std::vector<Node*> nodes_;
+    std::vector<std::reference_wrapper<Node>> nodes_;
 };
 
 #endif
