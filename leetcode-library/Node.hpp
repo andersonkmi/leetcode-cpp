@@ -12,6 +12,10 @@ public:
     Node& operator=(const Node&) = delete;
     virtual ~Node();
 
+    std::string getWord();
+    std::string getWord() const;
+    bool isVisited();
+    bool isVisited() const;
 private:
     std::string word_;
     bool is_visited_;
