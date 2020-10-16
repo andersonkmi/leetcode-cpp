@@ -4,6 +4,8 @@
 #include <string>
 #include <vector>
 
+using namespace std;
+
 class Node
 {
 public:
@@ -21,6 +23,7 @@ public:
 private:
     std::string word_;
     bool is_visited_;
+    std::vector<Node*> nodes_;
 };
 
 #endif
