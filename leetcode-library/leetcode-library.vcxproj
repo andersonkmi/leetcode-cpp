@@ -156,6 +156,7 @@
     <ClInclude Include="MultiplyStrings.hpp" />
     <ClInclude Include="Node.hpp" />
     <ClInclude Include="ValidParentheses.hpp" />
+    <ClInclude Include="WordLadder.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
@@ -163,6 +164,7 @@
     <ClCompile Include="MultiplyStrings.cpp" />
     <ClCompile Include="Node.cpp" />
     <ClCompile Include="ValidParentheses.cpp" />
+    <ClCompile Include="WordLadder.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
