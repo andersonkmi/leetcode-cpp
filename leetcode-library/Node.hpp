@@ -23,6 +23,9 @@ public:
     bool isVisited();
     bool isVisited() const;
     void addNode(std::shared_ptr<Node>& node);
+    void markVisited();
+
+    std::vector<std::shared_ptr<Node>> getNodes();
 private:
     std::string word_;
     bool is_visited_;

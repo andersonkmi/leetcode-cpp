@@ -38,3 +38,13 @@ void Node::addNode(std::shared_ptr<Node>& node)
 {
     nodes_.push_back(node);
 }
+
+void Node::markVisited()
+{
+    is_visited_ = true;
+}
+
+std::vector<std::shared_ptr<Node>> Node::getNodes()
+{
+    return nodes_;
+}

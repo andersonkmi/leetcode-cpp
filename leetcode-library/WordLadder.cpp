@@ -1,4 +1,6 @@
 #include "WordLadder.hpp"
+#include <list>
+#include <algorithm>
 
 WordLadder::WordLadder()
 {
@@ -12,9 +14,43 @@ WordLadder::~WordLadder()
 
 int WordLadder::ladderLength(const std::string& beginWord, const std::string& endWord, const std::vector<std::string>& wordList)
 {
+    std::vector<std::string>::const_iterator iterator = std::find(wordList.cbegin(), wordList.cend(), endWord);
+    if (iterator == wordList.cend()) {
+        return 0;
+    }
+   
     std::vector<std::shared_ptr<Node>> nodes = createNodes(wordList);
     createGraph(nodes, wordList);
-    return 0;
+
+    std::vector<std::string> startingNodes = createListOfNextItems(beginWord, wordList);
+    std::string startStr = startingNodes[0];
+    std::vector<std::shared_ptr<Node>>::iterator result = std::find_if(nodes.begin(), nodes.end(), [startStr](const std::shared_ptr<Node>& m) -> bool { return m->getWord() == startStr; });
+    std::shared_ptr<Node> startingNodePtr = *result;
+
+    std::list<std::shared_ptr<Node>> nextNodesToVisit;
+    nextNodesToVisit.push_back(startingNodePtr);
+
+    int steps = 0;
+    while (!nextNodesToVisit.empty()) {
+        std::shared_ptr<Node> currentNode = nextNodesToVisit.front();
+        nextNodesToVisit.pop_front();
+
+        if (currentNode->isVisited()) {
+            continue;
+        }
+
+        if (currentNode->getWord() == endWord) {
+            break;
+        }
+        currentNode->markVisited();
+        std::vector<std::shared_ptr<Node>> otherNodes = currentNode->getNodes();
+        for (std::vector<std::shared_ptr<Node>>::iterator it = otherNodes.begin(); it != otherNodes.end(); it++) {
+            nextNodesToVisit.push_back(*it);
+        }
+
+        steps++;
+    }
+    return steps;
 }
 
 std::vector<std::shared_ptr<Node>> WordLadder::createNodes(const std::vector<std::string>& wordList)

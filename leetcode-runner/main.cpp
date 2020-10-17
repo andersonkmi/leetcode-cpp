@@ -37,6 +37,7 @@ int main()
     wordList.push_back("dog");
     wordList.push_back("lot");
     wordList.push_back("log");
+    wordList.push_back("cog");
     WordLadder wl;
     wl.ladderLength(beginWord, endWord, wordList);
 }
