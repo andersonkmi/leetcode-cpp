@@ -27,9 +27,11 @@ std::vector<std::shared_ptr<Node>> WordLadder::createNodes(const std::vector<std
     return items;
 }
 
-void WordLadder::createGraph(std::vector<std::shared_ptr<Node>>& items)
+void WordLadder::createGraph(std::vector<std::shared_ptr<Node>>& items, std::vector<std::string>& wordList)
 {
-    
+    for (std::vector<std::shared_ptr<Node>>::iterator it = items.begin(); it != items.end(); it++) {
+        std::vector<std::string> nextItems = createListOfNextItems((*it)->getWord(), wordList);        
+    }
 }
 
 int WordLadder::numberOfDifferentChars(const std::string& str1, const std::string& str2)
