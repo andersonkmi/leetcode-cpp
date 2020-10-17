@@ -34,7 +34,7 @@ bool Node::operator==(const Node& rhs)
     return this->word_ == rhs.word_;
 }
 
-void Node::addNode(Node& node)
+void Node::addNode(std::shared_ptr<Node>& node)
 {
-    nodes_.push_back(&node);
+    nodes_.push_back(node);
 }

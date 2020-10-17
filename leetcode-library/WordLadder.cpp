@@ -33,6 +33,14 @@ void WordLadder::createGraph(std::vector<std::shared_ptr<Node>>& items, const st
 {
     for (std::vector<std::shared_ptr<Node>>::iterator it = items.begin(); it != items.end(); it++) {
         std::vector<std::string> nextItems = createListOfNextItems((*it)->getWord(), wordList);        
+        for (std::vector<std::string>::iterator wordIterator = nextItems.begin(); wordIterator != nextItems.end(); wordIterator++) {
+            std::string currentItem = *wordIterator;
+            std::vector<std::shared_ptr<Node>>::iterator result = std::find_if(items.begin(), items.end(), [currentItem](const std::shared_ptr<Node>& m) -> bool { return m->getWord() == currentItem; });
+
+            if (result != items.end()) {
+                (*it)->addNode(*result);
+            }
+        }
     }
 }
 
