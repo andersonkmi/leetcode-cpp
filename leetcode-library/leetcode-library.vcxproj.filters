@@ -30,7 +30,7 @@
     <ClInclude Include="Node.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="WordLadder.h">
+    <ClInclude Include="WordLadder.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

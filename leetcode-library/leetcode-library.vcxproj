@@ -156,7 +156,7 @@
     <ClInclude Include="MultiplyStrings.hpp" />
     <ClInclude Include="Node.hpp" />
     <ClInclude Include="ValidParentheses.hpp" />
-    <ClInclude Include="WordLadder.h" />
+    <ClInclude Include="WordLadder.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
