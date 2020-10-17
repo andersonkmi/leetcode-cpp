@@ -10,6 +10,7 @@
 #include "Node.hpp"
 #include <vector>
 #include <string>
+#include <memory>
 
 class LEETCODE_LIBRARY_API WordLadder
 {
@@ -22,7 +23,7 @@ public:
     int ladderLength(const std::string& beginWord, const std::string& endWord, const std::vector<std::string>& wordList);
 
 private:
-    std::vector<Node*>* createNodes(const std::vector<std::string>& wordList);
+    std::vector<std::shared_ptr<Node>> createNodes(const std::vector<std::string>& wordList);
 };
 
 #endif
