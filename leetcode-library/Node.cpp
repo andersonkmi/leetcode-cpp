@@ -32,3 +32,8 @@ bool Node::operator==(const Node& rhs)
 {
     return this->word_ == rhs.word_;
 }
+
+void Node::addNode(const Node& node)
+{
+    nodes_.push_back(std::cref(node));
+}

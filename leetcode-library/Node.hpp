@@ -21,10 +21,11 @@ public:
     std::string getWord() const;
     bool isVisited();
     bool isVisited() const;
+    void addNode(const Node&);
 private:
     std::string word_;
     bool is_visited_;
-    std::vector<std::reference_wrapper<Node>> nodes_;
+    std::vector<std::reference_wrapper<const Node>> nodes_;
 };
 
 #endif
