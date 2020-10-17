@@ -24,6 +24,9 @@ public:
 
 private:
     std::vector<std::shared_ptr<Node>> createNodes(const std::vector<std::string>& wordList);
+    std::vector<std::string> createListOfNextItems(const std::string& word, const std::vector<std::string>& wordList);
+    int numberOfDifferentChars(const std::string& str1, const std::string& str2);
+    void createGraph(std::vector<std::shared_ptr<Node>>& items);
 };
 
 #endif
