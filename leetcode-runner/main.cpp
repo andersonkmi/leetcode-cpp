@@ -11,7 +11,7 @@
 
 int main()
 {
-    /*ValidParentheses service;
+    ValidParentheses service;
     ValidParenthesesTester service_tester;
     service_tester.perform_tests(service);
 
@@ -27,7 +27,6 @@ int main()
     std::shared_ptr<Fibonacci> fiboMemo = std::make_shared<Fibonacci>(true);
     std::cout << "fib(41): " << fiboMemo->calculate(41) << std::endl;
     std::cout << "fib(42): " << fiboMemo->calculate(42) << std::endl;
-    */
 
     std::string beginWord("hit");
     std::string endWord("cog");
