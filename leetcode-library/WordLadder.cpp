@@ -14,3 +14,15 @@ int WordLadder::ladderLength(const std::string& beginWord, const std::string& en
 {
     return 0;
 }
+
+std::vector<Node*>* WordLadder::createNodes(const std::vector<std::string>& wordList)
+{
+    std::vector<Node*>* items = new std::vector<Node*>();
+    for (std::vector<std::string>::const_iterator it = wordList.begin(); it != wordList.end(); it++) {
+        std::string value = *it;
+        Node* node = new Node(value);
+        items->push_back(node);
+    }
+    
+    return items;
+}

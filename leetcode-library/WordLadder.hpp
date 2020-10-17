@@ -20,6 +20,9 @@ public:
     virtual ~WordLadder();
 
     int ladderLength(const std::string& beginWord, const std::string& endWord, const std::vector<std::string>& wordList);
+
+private:
+    std::vector<Node*>* createNodes(const std::vector<std::string>& wordList);
 };
 
 #endif
