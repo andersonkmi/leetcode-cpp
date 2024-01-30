@@ -22,4 +22,14 @@ The code created is not optimal, since the purpose is to use the exercises to ap
 
 ## Build and test
 
-TBD
+### Build
+```
+$ cmake -S . -B build
+$ cmake --build build
+```
+
+### Test
+
+```
+$ cmake --build build --target test
+```
