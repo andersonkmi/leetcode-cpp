@@ -31,13 +31,4 @@
 *.out
 *.app
 
-.vs/
-x64/
-Debug/
-Release/
-leetcode-library/x64/
-leetcode-library/Debug/
-leetcode-library/Release/
-leetcode-runner/x64/
-leetcode-runner/Debug/
-leetcode-runner/Release/
+build/
