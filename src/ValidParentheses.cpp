@@ -30,10 +30,8 @@ bool ValidParentheses::is_valid(const std::string& input) const
     return const_cast<ValidParentheses*>(this)->is_valid(input);
 }
 
-bool ValidParentheses::is_valid(const std::string& input) 
-{
-    if (is_even_length(input) == false) 
-    {
+bool ValidParentheses::is_valid(const std::string& input) {
+    if (is_even_length(input) == false) {
         return false;
     }
 

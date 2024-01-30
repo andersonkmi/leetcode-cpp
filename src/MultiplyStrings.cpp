@@ -10,8 +10,6 @@ MultiplyStrings::MultiplyStrings()
 
 std::string MultiplyStrings::multiply(const std::string& number1, const std::string& number2)
 {
-    std::string result("");
-
     unsigned long long value1 = convert(number1);
     unsigned long long value2 = convert(number2);
 
