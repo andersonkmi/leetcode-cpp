@@ -29,7 +29,11 @@ $ cmake --build build
 ```
 
 ### Test
-
 ```
 $ cmake --build build --target test
+```
+
+### Generate docs
+```
+$ cmake --build build --target docs
 ```
