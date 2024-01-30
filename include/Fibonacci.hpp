@@ -1,16 +1,10 @@
 #ifndef FIBONACCI_HPP__
 #define FIBONACCI_HPP__
 
-#ifdef LEETCODELIBRARY_EXPORTS
-#define LEETCODE_LIBRARY_API __declspec(dllexport)
-#else
-#define LEETCODE_LIBRARY_API __declspec(dllimport)
-#endif
-
 #include <map>
 using namespace std;
 
-class LEETCODE_LIBRARY_API Fibonacci
+class Fibonacci
 {
 public:
     Fibonacci(bool use_memoization = false);

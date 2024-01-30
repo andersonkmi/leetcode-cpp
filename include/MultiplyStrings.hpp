@@ -1,17 +1,11 @@
 #ifndef MULTIPLY_STRINGS_HPP__
 #define MULTIPLY_STRINGS_HPP__
 
-#ifdef LEETCODELIBRARY_EXPORTS
-#define LEETCODE_LIBRARY_API __declspec(dllexport)
-#else
-#define LEETCODE_LIBRARY_API __declspec(dllimport)
-#endif
-
 #include <string>
 
 using namespace std;
 
-class LEETCODE_LIBRARY_API MultiplyStrings
+class MultiplyStrings
 {
 public:
     MultiplyStrings();

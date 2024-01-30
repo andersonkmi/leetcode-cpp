@@ -1,4 +1,4 @@
-#include "WordLadder.hpp"
+#include <WordLadder.hpp>
 #include <list>
 #include <algorithm>
 

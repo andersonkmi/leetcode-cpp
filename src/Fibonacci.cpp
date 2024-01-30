@@ -1,4 +1,4 @@
-#include "Fibonacci.hpp"
+#include <Fibonacci.hpp>
 
 Fibonacci::Fibonacci(bool use_memoization) : use_memoization_(use_memoization), calculated_values_()
 {
