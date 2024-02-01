@@ -31,26 +31,26 @@ bool ValidParentheses::is_valid(const std::string& input) const
 }
 
 bool ValidParentheses::is_valid(const std::string& input) {
-    if (is_even_length(input) == false) {
+    if (!is_even_length(input)) {
         return false;
     }
 
     std::vector<char> chars(input.c_str(), input.c_str() + input.size());
-    if (has_valid_chars(chars) == false) {
+    if (!has_valid_chars(chars)) {
         return false;
     }
 
     std::stack<char> tokens;
-    for (std::vector<char>::const_iterator index = chars.cbegin(); index != chars.cend(); index++) 
+    for (char index : chars)
     {
-        if (is_opening_symbol(*index) == true) 
+        if (is_opening_symbol(index))
         {
-            tokens.push(*index);
+            tokens.push(index);
         } 
         else 
         {
-            char expected_opening_char = expected_symbol_[*index];
-            if (tokens.empty() == true) {
+            char expected_opening_char = expected_symbol_[index];
+            if (tokens.empty()) {
                 return false;
             }
 
@@ -63,7 +63,7 @@ bool ValidParentheses::is_valid(const std::string& input) {
         }
     }
 
-    if (tokens.empty() == true) 
+    if (tokens.empty())
     {
         return true;
     }
@@ -77,10 +77,10 @@ bool ValidParentheses::is_even_length(const std::string& input)
 
 bool ValidParentheses::has_valid_chars(const std::vector<char>& chars) 
 {
-    for (std::vector<char>::const_iterator index = chars.cbegin(); index != chars.cend(); index++) 
+    for (char index : chars)
     {
-        std::vector<char>::const_iterator open_iterator = std::find(opening_symbols_.cbegin(), opening_symbols_.cend(), *index);
-        std::vector<char>::const_iterator close_iterator = std::find(closing_symbols_.cbegin(), closing_symbols_.cend(), *index);
+        auto open_iterator = std::find(opening_symbols_.cbegin(), opening_symbols_.cend(), index);
+        auto close_iterator = std::find(closing_symbols_.cbegin(), closing_symbols_.cend(), index);
         if (open_iterator == opening_symbols_.cend() && close_iterator == closing_symbols_.cend()) 
         {
             return false;
@@ -92,7 +92,7 @@ bool ValidParentheses::has_valid_chars(const std::vector<char>& chars)
 
 bool ValidParentheses::is_opening_symbol(const char item) 
 {
-    std::vector<char>::const_iterator index = std::find(opening_symbols_.cbegin(), opening_symbols_.cend(), item);
+    auto index = std::find(opening_symbols_.cbegin(), opening_symbols_.cend(), item);
     if (index != opening_symbols_.cend()) 
     {
         return true;

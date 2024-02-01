@@ -21,7 +21,7 @@ public:
     virtual ~ValidParentheses();
     
 private:
-    bool is_even_length(const std::string&);
+    static bool is_even_length(const std::string&);
     bool has_valid_chars(const std::vector<char>&);
     bool is_opening_symbol(const char);
 
