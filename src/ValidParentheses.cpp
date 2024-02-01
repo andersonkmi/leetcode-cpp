@@ -25,11 +25,6 @@ ValidParentheses::~ValidParentheses()
     expected_symbol_.clear();
 }
 
-bool ValidParentheses::is_valid(const std::string& input) const 
-{
-    return const_cast<ValidParentheses*>(this)->is_valid(input);
-}
-
 bool ValidParentheses::is_valid(const std::string& input) {
     if (!is_even_length(input)) {
         return false;
@@ -90,7 +85,7 @@ bool ValidParentheses::has_valid_chars(const std::vector<char>& chars)
     return true;
 }
 
-bool ValidParentheses::is_opening_symbol(const char item) 
+bool ValidParentheses::is_opening_symbol(char item)
 {
     auto index = std::find(opening_symbols_.cbegin(), opening_symbols_.cend(), item);
     if (index != opening_symbols_.cend()) 
