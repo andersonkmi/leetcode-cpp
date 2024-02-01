@@ -16,7 +16,7 @@ public:
     ValidParentheses(const ValidParentheses&) = delete;
     ValidParentheses& operator= (const ValidParentheses&) = delete;
     bool is_valid(const std::string& input);
-    bool is_valid(const std::string& input) const;
+    [[nodiscard]] bool is_valid(const std::string& input) const;
 
     virtual ~ValidParentheses();
     
