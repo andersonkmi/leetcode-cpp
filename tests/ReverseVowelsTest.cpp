@@ -16,8 +16,14 @@ TEST_CASE("When reversing egg should return egg", "[reverse_vowels]") {
 }
 
 
-TEST_CASE("When reversing omo should return egg", "[reverse_vowels]") {
+TEST_CASE("When reversing omo should return omo", "[reverse_vowels]") {
     ReverseVowels reverseVowels;
     std::string result = reverseVowels.reverseVowels("omo");
     CHECK(result == "omo");
+}
+
+TEST_CASE("When reversing leetcode should return leotcede", "[reverse_vowels]") {
+    ReverseVowels reverseVowels;
+    std::string result = reverseVowels.reverseVowels("leetcode");
+    CHECK(result == "leotcede");
 }
