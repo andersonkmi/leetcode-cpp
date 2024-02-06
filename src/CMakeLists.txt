@@ -8,7 +8,8 @@ set(HEADER_LIST "${LeetcodeCPP_SOURCE_DIR}/include/Node.hpp"
         "${LeetcodeCPP_SOURCE_DIR}/include/MultiplyStrings.hpp"
         "${LeetcodeCPP_SOURCE_DIR}/include/ValidParentheses.hpp"
         "${LeetcodeCPP_SOURCE_DIR}/include/WordLadder.hpp"
-        "${LeetcodeCPP_SOURCE_DIR}/include/ReverseVowels.hpp")
+        "${LeetcodeCPP_SOURCE_DIR}/include/ReverseVowels.hpp"
+        "${LeetcodeCPP_SOURCE_DIR}/include/ReverseWords.h")
 
 # Make an automatic library - will be static or dynamic based on user setting
 add_library(leetcodecpp_library SHARED ${HEADER_LIST}
@@ -17,6 +18,7 @@ add_library(leetcodecpp_library SHARED ${HEADER_LIST}
         Node.cpp
         ValidParentheses.cpp
         WordLadder.cpp
+        ReverseWords.cpp
         ReverseVowels.cpp)
 
 # We need this directory, and users of our library will need it too
