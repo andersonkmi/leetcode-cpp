@@ -7,3 +7,8 @@ ReverseWords::ReverseWords() {
 ReverseWords::~ReverseWords() {
     // empty destructor
 }
+
+string ReverseWords::reverseWords(const string& value) {
+    // First step: tokenize original string
+    return {""};
+}
