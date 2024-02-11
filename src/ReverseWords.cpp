@@ -1,14 +1,6 @@
 #include <ReverseWords.h>
 #include <sstream>
 
-ReverseWords::ReverseWords() {
-    // nothing so far
-}
-
-ReverseWords::~ReverseWords() {
-    // empty destructor
-}
-
 string ReverseWords::reverseWords(const string& value) {
     // First step: tokenize original string
     stack<string> tokens = tokenizeString(value);

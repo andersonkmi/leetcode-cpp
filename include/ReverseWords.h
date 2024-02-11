@@ -8,8 +8,8 @@ using namespace std;
 
 class ReverseWords {
 public:
-    ReverseWords();
-    virtual ~ReverseWords();
+    ReverseWords() = default;
+    virtual ~ReverseWords() = default;
     ReverseWords(const ReverseWords&) = delete;
     ReverseWords& operator=(const ReverseWords&) = delete;
 
