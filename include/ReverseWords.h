@@ -16,7 +16,7 @@ public:
     string reverseWords(const string& value);
 
 private:
-    stack<string> tokenizeString(const string& value);
+    static stack<string> tokenizeString(const string& value);
 };
 
 #endif //LEETCODECPP_REVERSEWORDS_H

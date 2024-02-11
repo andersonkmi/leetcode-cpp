@@ -1,4 +1,5 @@
 #include <ReverseWords.h>
+#include <sstream>
 
 ReverseWords::ReverseWords() {
     // nothing so far
@@ -10,7 +11,17 @@ ReverseWords::~ReverseWords() {
 
 string ReverseWords::reverseWords(const string& value) {
     // First step: tokenize original string
-    return {""};
+    stack<string> tokens = tokenizeString(value);
+    ostringstream os;
+    while(!tokens.empty()) {
+        string token = tokens.top();
+        tokens.pop();
+        os << token;
+        if (!tokens.empty()) {
+            os << " ";
+        }
+    }
+    return os.str();
 }
 
 stack<string> ReverseWords::tokenizeString(const std::string& value) {
