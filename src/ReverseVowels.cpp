@@ -1,8 +1,7 @@
 
 #include <ReverseVowels.hpp>
-#include <algorithm>
 
-ReverseVowels::ReverseVowels() : extracted_vowels_() {
+ReverseVowels::ReverseVowels() {
     // Empty constructor
 }
 
@@ -25,7 +24,7 @@ void ReverseVowels::extractVowelsInformation(const std::string& input) {
     }
 }
 
-bool ReverseVowels::isVowel(const char item) {
+bool ReverseVowels::isVowel(char item) {
     return (item == 'a' || item == 'A'
     || item == 'e' || item == 'E' 
     || item == 'i' || item == 'I'

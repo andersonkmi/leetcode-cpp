@@ -1,5 +1,5 @@
-#ifndef REVERSEVOWELS_HPP__
-#define REVERSEVOWELS_HPP__
+#ifndef REVERSEVOWELS_HPP_
+#define REVERSEVOWELS_HPP_
 
 #include <string>
 #include <stack>
@@ -18,7 +18,8 @@ private:
     std::stack<char> extracted_vowels_;
 
     void extractVowelsInformation(const std::string&);
-    bool isVowel(const char);
+
+    static bool isVowel(char);
     void replaceVowels(std::string&);
 };
 
