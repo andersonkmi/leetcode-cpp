@@ -5,9 +5,10 @@
 using namespace std;
 
 int main() {
-    ReverseVowels rv;
+    ReverseVowels* rv = new ReverseVowels;
     string input("leetcode");
-    string result = rv.reverseVowels(input);
+    string result = rv->reverseVowels(input);
     cout << result << endl;
+    delete(rv);
     return 0;
 }
