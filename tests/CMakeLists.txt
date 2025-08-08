@@ -1,10 +1,5 @@
 # Testing library
-FetchContent_Declare(
-        catch
-        GIT_REPOSITORY https://github.com/catchorg/Catch2.git
-        GIT_TAG v3.4.0)
-FetchContent_MakeAvailable(catch)
-# Adds Catch2::Catch2
+find_package(Catch2 3 REQUIRED)
 
 # Tests need to be added as executables first
 add_executable(LeetCodeCppTestLib
@@ -21,3 +16,6 @@ target_link_libraries(LeetCodeCppTestLib PRIVATE leetcodecpp_library Catch2::Cat
 # You can also run examples and check the output, as well.
 add_test(NAME LeetCodeCppTestLib COMMAND LeetCodeCppTestLib) # Command can be a target
 
+include(CTest)
+include(Catch)
+catch_discover_tests(LeetCodeCppTestLib)

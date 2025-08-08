@@ -5,6 +5,8 @@ project(
   DESCRIPTION "Leetcode for C++"
   LANGUAGES CXX)
 
+set(CMAKE_CXX_STANDARD 17)
+
 # Only do these if this is the main project, and not if it is included through add_subdirectory
 if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
   # Optionally set things like CMAKE_CXX_STANDARD, CMAKE_POSITION_INDEPENDENT_CODE here
@@ -19,15 +21,6 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
   # since it calls enable_testing, which must be in the
   # main CMakeLists.
   include(CTest)
-
-  # Docs only available if this is the main app
-  find_package(Doxygen)
-  if(Doxygen_FOUND)
-    add_subdirectory(docs)
-  else()
-    message(STATUS "Doxygen not found, not building docs")
-  endif()
-
 endif()
 
 # FetchContent added in CMake 3.11, downloads during the configure step
@@ -39,6 +32,8 @@ add_subdirectory(src)
 
 # The executable code is here
 add_subdirectory(apps)
+
+enable_testing()
 
 # Testing only available if this is the main app
 # Emergency override MODERN_CMAKE_BUILD_TESTING provided as well

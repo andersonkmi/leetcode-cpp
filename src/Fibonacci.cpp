@@ -22,7 +22,7 @@ int Fibonacci::processFibonacci(int number)
     }
     else
     {
-        if (use_memoization_ == true)
+        if (use_memoization_)
         {
             if (calculated_values_.find(number) == calculated_values_.end())
             {
