@@ -16,6 +16,5 @@ target_link_libraries(LeetCodeCppTestLib PRIVATE leetcodecpp_library Catch2::Cat
 # You can also run examples and check the output, as well.
 add_test(NAME LeetCodeCppTestLib COMMAND LeetCodeCppTestLib) # Command can be a target
 
-include(CTest)
 include(Catch)
 catch_discover_tests(LeetCodeCppTestLib)
